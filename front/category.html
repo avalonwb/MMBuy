@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主页</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
+  
+  <style>
+
+  </style>
+  <script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="main">
+
+      <!-- site-top -->
+      <div class="site-top">
+        <div class="logo"></div>
+        <div class="app"></div>
+      </div>
+
+      <!-- search -->
+      <div class="search clearfix">
+        <input type="text" placeholder="输入你想比价的内容">
+        <button>搜索</button>
+      </div>
+      
+      <!-- middle -->
+      <div class="middle">
+        <!-- 动态坑 -->
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <ul class="clearfix">
+          <li>登录</li>
+          <li>注册</li>
+          <li id="goTop"><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="last">
+          <p><span class="red">手机app卸载</span>MMP手机版<i>--掌上比价平台</i></p>
+          <p>m.mmmmp.com</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- 一级分类模板 -->
+<script type="text/template" id="topTmp">
+  {{ each result ele index }}
+    <div class="box">
+        <div class="title clearfix" data-id="{{ ele.titleId }}">
+          <span>{{ ele.title }}</span>
+          <i class="arrow"></i>
+        </div>
+        <ul class="list clearfix" data-current="{{ ele.titleId }}">
+            <!-- 二级坑 -->
+        </ul>
+    </div>
+  {{ /each }}
+</script>
+
+<!-- 二级分类模板 -->
+<script type="text/template" id="secondTmp">
+ {{ each result ele index }}
+  <li data-index="{{ index }}"><a href="product.html?categoryId={{ ele.categoryId }}">{{ ele.category }}</a></li>
+ {{ /each }}
+</script>
+
+<script src="lib/jQuery/jquery-1.12.4.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
+<script src="js/common.js"></script>
+<script src="js/category.js"></script>
+
+<script>
+</script>
+</body>
+
+</html>

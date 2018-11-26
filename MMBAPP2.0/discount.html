@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/discount.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <i class="back" onclick="javascript:history.back(-1)"></i>
+      <img src="images/header_app.png" class="app" alt="">
+      <h3>国内折扣</h3>
+    </div>
+
+    <div class="mmb_discount">
+      <h3>预售：索尼h.ear系列 降噪式头戴耳机 MDR-100AAP</h3>
+      <div class="subtitle">
+        <span>京东商城</span>
+        <span>10-25 12:31</span>
+        <span>zzr / 慢慢买</span>
+      </div>
+      <div class="content">
+        <img src="" alt="">
+        <p></p>
+
+        <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/2016100012324797613.jpg"
+          alt="预售：索尼h.ear系列 降噪式头戴耳机 MDR-100AAP">
+
+      </div>
+
+    </div>
+    <div class="mmb_extra">
+
+      <div class="goLink">
+        前往购买
+      </div>
+      <div class="wechatCode">
+        <img src="images/mmbweixin2.png" alt="">
+      </div>
+      <div class="cu-content-pl ui-border-t">
+
+      </div>
+    </div>
+  </div>
+  <div class="mmb_footer">
+    <div class="top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#" class="toTop">
+        返回顶部
+      </a>
+    </div>
+    <div class="bottom">
+      <p class="downApp">
+        <a href="#" class="colred">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#" class="col666">--掌上比价平台</a>
+      </p>
+      <p class="col666">m.manmanbuy.com</p>
+    </div>
+  </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/discount.js"></script>
+
+  <!--渲染商品详情-->
+  <script type="text/template" id="discount">
+    <h3>{{result[0].productName}}</h3>
+    <div class="subtitle">
+      <span>{{result[0].productFrom}}</span>
+      <span>{{result[0].productTime}}</span>
+      <span>{{result[0].productTips}}</span>
+    </div>
+    <div class="content">
+      {{@result[0].productImg}}
+      <p>{{result[0].productInfo}}</p>
+      {{@result[0].productImg}}
+
+    </div>
+
+  </script>
+  <!--渲染商品订单城市评价等额外内容-->
+  <script type="text/template" id="extra">
+    <div class="goLink">
+      前往购买
+    </div>
+    <div class="wechatCode">
+      <img src="images/mmbweixin2.png" alt="">
+    </div>
+    <div class="cu-content-pl ui-border-t">
+      {{@result[0].productComment}}
+    </div>
+
+  </script>
+
+
+</body>
+
+</html>

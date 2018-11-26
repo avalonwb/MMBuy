@@ -1,0 +1,211 @@
+@import "normalize";
+@import "base";
+@import "vairable";
+@import "adapter";
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+
+  background-color: #fff;
+  margin: 0 auto;
+
+}
+.mmb_header {
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+  .back {
+    float: left;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 14rem/@base;
+    background: url(../images/icback.svg) no-repeat;
+    background-size: 20rem/@base 20rem/@base;
+    background-clip: content-box;
+    background-origin: content-box;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 18rem/@base;
+    text-align: center;
+    overflow: hidden;
+    line-height: 48rem/@base;
+
+  }
+  .app {
+    float: right;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 7rem/@base;
+
+  }
+}
+
+.mmb_footer {
+  background-color: #efefef;
+  .top {
+    border-top: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+    a {
+      display: block;
+      float: left;
+      width: 33.33%;
+      height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+      line-height: 32rem/@base;
+    }
+    .toTop {
+      border-right: none;
+    }
+  }
+  .bottom {
+    border-top: 1rem/@base solid #c4c4c4;
+    height: 62rem/@base;
+    font-size: 12rem/@base;
+    padding: 15rem/@base 0;
+    text-align: center;
+    .downApp {
+
+      .colred {
+        color: red;
+      }
+    }
+    .col666{
+      color: #666;
+    }
+  }
+}
+
+.mmb_discount {
+  padding: 20rem/@base 20rem/@base 0rem/@base 10rem/@base;
+  h3 {
+    line-height: 22rem/@base;
+    font-size: 18rem/@base;
+    font-weight: 700;
+    color: #5a5a5a;
+  }
+  .subtitle {
+    color: #999999;
+    font-size: 12rem/@base;
+    margin: 20rem/@base 5rem/@base;
+  }
+  .content {
+    padding-bottom: 20rem/@base;
+    p {
+      line-height: 24rem/@base;
+      color: #606060;
+      font-size: 16rem/@base;
+    }
+    img:first-child {
+      width: 120rem/@base;
+      height: 102rem/@base;
+      float: right;
+    }
+    img:last-child {
+      width: 220rem/@base;
+      height: 220rem/@base;
+      margin-top: 20rem/@base;
+    }
+  }
+
+}
+
+.mmb_extra {
+  padding: 0 10rem/@base;
+  .cu-content-pl {
+    .tit {
+      font-size: 16rem/@base;
+      padding: 6rem/@base 8rem/@base;
+    }
+    .reply {
+      padding: 6rem/@base 8rem/@base;
+      .form {
+        height: 116rem/@base;
+        border: 1rem/@base solid #ccc;
+        position: relative;
+        textarea {
+          width: 90%;
+          height: 68rem/@base;
+          position: absolute;
+          top: 2rem/@base;
+          left: 5%;
+        }
+        .ctrl input{
+          width: 100rem/@base;
+          height: 36rem/@base;
+          font-size: 16rem/@base;
+          color: #ffffff;
+          border: 2rem/@base solid #ff841d;
+          background-color: #ff841d;
+          position: absolute;
+          bottom: 0rem/@base;
+          right: 0rem/@base;
+        }
+      }
+    }
+    .list {
+      .ui-border-b {
+        //height: 79rem/@base;
+        padding: 18rem/@base 10rem/@base;
+        .userimg  {
+          float: left;
+          >img{
+            border-radius: 50%;
+            width: 40rem/@base;
+            height: 40rem/@base;
+          }
+
+        }
+        .con {
+          overflow: hidden;
+        }
+        .name {
+
+          font-size: 13rem/@base;
+          margin-left: 10rem/@base;
+          .username {
+            float: left;
+            color: #5997c0;
+          }
+          .time {
+            float: right;
+            color: #999999;
+          }
+
+        }
+        .content {
+          margin-left: 10rem/@base;
+          float: left;
+          font-size: 15rem/@base;
+          color: #606060;
+          line-height: 22rem/@base;
+          >img {
+            width: 30rem/@base;
+            heihgt: 30rem/@base;
+          }
+        }
+      }
+    }
+  }
+  .goLink {
+    height: 30rem/@base;
+    line-height: 30rem/@base;
+    margin: 40rem/@base 10rem/@base;
+    background-color: #FF9000;
+    color: #ffffff;
+    font-size: 14rem/@base;
+    text-align: center;
+  }
+  .wechatCode {
+    height: 156rem/@base;
+    margin: 20rem/@base 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

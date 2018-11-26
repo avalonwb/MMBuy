@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/brand.css">
+  <title>Title</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="app">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </div>
+    <div class="mmb_search">
+      <div class="input">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="button">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+
+    <div class="mmb_topMenu">
+      <a href="index.html">首页</a>
+      <span>></span>
+      <a href="brandTitle.html">全部分类</a>
+      <span>></span>
+    </div>
+
+    <div class="mmb_brandRank">
+      <div class="title">平板电视哪个牌子好</div>
+      <ul class="brandBox">
+        <li class="brandList">
+          <a href="#">
+            <div class="rank">1</div>
+            <div class="desc">
+              <p>三星平板电视</p>
+              <p>30天全网销售：242408件</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mmb_saleRank">
+      <div class="title">平板电视产品销量排行</div>
+      <ul class="saleBox">
+        <li class="saleList">
+          <a href="bijia.html">
+            <div class="img">
+              <img src="images/tv.png" alt="">
+            </div>
+            <div class="desc">
+              <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+              <div class="center">
+                <span class="price fl">￥3266.00</span>
+                <span class="star fr"></span>
+              </div>
+              <div class="bottom">
+                <span class="fl">报价(6)</span>
+                <span class="fl">评论(3522)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mmb_newCom">
+      <div class="title">平板电视最新评论</div>
+      <ul class="comBox">
+        <li class="comList">
+          <div class="comTop">
+            <div class="img">
+              <img src="images/tv.png" alt="">
+            </div>
+            <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+          </div>
+          <div class="comCon">
+
+            <div class="comHeader">
+              g***n:
+              <span class="star"></span>
+              <span class="fr time">2016/2/18</span>
+            </div>
+            <div class="comment">
+              外观：精工细作，颜值再度提高作为一台55寸的大电视
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/brand.js"></script>
+
+  <script type="text/template" id="brandlist">
+    {{each result v i}}
+    <li class="brandList">
+      <a href="#">
+        <div class="rank">{{i+1}}</div>
+        <div class="desc">
+          <p>{{v.brandName}}</p>
+          <p>{{v.brandInfo}}</p>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/template" id="salelist">
+    {{each result v i}}
+    <li class="saleList">
+      <a href="bijia.html" data-productid="{{v.productId}}">
+        <div class="img">
+          {{@v.productImg}}
+        </div>
+        <div class="desc">
+          <p>{{v.productName}}</p>
+          <div class="center">
+            <span class="price fl">{{v.productPrice}}</span>
+            <span class="star fr"></span>
+          </div>
+          <div class="bottom">
+            <span class="fl">{{v.productQuote}}</span>
+            <span class="fl">{{v.productCom}}</span>
+          </div>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/template" id="comlist">
+    {{each result v i}}
+    <li class="comList">
+      <div class="comTop">
+        <div class="img">
+          <img src="images/tv.png" alt="">
+        </div>
+        <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+      </div>
+      <div class="comCon">
+
+        <div class="comHeader">
+          {{v.comName}}
+          <span class="star"></span>
+          <span class="fr time">{{v.comTime}}</span>
+        </div>
+        <div class="comment">
+          {{v.comContent}}
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </script>
+</body>
+
+</html>

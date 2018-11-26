@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <i class="back" onclick="javascript:history.back(-1)"></i>
+      <img src="images/header_app.png" class="app" alt="">
+      <h3>肯德基优惠券</h3>
+
+    </div>
+
+    <div class="mmb_couponProduct">
+      <p class="beforeTip">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+      <ul class="couproBox">
+        <li class="couproList">
+          <a href="#">
+            <div class="img">
+              <img src="images/chicken.jpg" alt="">
+            </div>
+            <div class="desc">
+              <p class="title">C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+              <p class="price">￥ 28</p>
+              <p class="deadTime">有效期至10月31日</p>
+            </div>
+            <div class="arrow_right">
+
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+    <div class="mmb_mask">
+      <div class="mask_img">
+        <img src="images/chicken.jpg" alt="">
+        <i class="delete"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/couponproduct.js"></script>
+
+  <script type="text/template" id="couproList">
+    {{each result v i}}
+    <li class="couproList">
+      <a href="javascript:;" data-couponProductId="{{v.couponProductId}}" data-img="{{v.couponProductImg}}">
+        <div class="img">
+          {{@v.couponProductImg}}
+        </div>
+        <div class="desc">
+          <p class="title">{{v.couponProductName}}</p>
+          <p class="price">{{v.couponProductPrice}}</p>
+          <p class="deadTime">{{v.couponProductTime}}</p>
+        </div>
+        <div class="arrow_right"> </div>
+      </a>
+    </li>
+    {{/each}}
+
+  </script>
+</body>
+
+</html>

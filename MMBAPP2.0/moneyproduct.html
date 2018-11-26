@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <i class="back" onclick="javascript:history.back(-1)"></i>
+      <img src="images/header_app.png" class="app" alt="">
+      <h3>国内折扣</h3>
+
+    </div>
+
+    <div class="mmb_moneyproduct">
+      <h3>预售：索尼h.ear系列 降噪式头戴耳机 MDR-100AAP</h3>
+      <div class="subtitle">
+        <span>京东商城</span>
+        <span>10-25 12:31</span>
+        <span>zzr / 慢慢买</span>
+      </div>
+      <div class="content">
+        <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/2016100012324797613.jpg"
+          alt="预售：索尼h.ear系列 降噪式头戴耳机 MDR-100AAP">
+        <p>SONY去年最为热门的h.ear系列头戴式耳机，这款外型的设计上非常符合喜欢索尼大法粉丝们的期待，而且去年热门电视剧中也常常会出现它的身影，比如《太阳的后裔》，剧中那款就是黑色的。且这款降噪功能突出的耳机配合一个自家的HIFI播放器，效果也只能用出色来形容，特别是中、低两个音频的表现能力。京东商城日常的售价为1299元，目前双11的预售价为799元包邮，喜欢的慢友们不妨提早预定吧。</p>
+        <p>京东商城日常的售价为1299元，目前双11的预售价为799元包邮，喜欢的慢友们不妨提早预定吧。</p>
+        <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/2016100012324797613.jpg"
+          alt="预售：索尼h.ear系列 降噪式头戴耳机 MDR-100AAP">
+
+      </div>
+
+    </div>
+    <div class="mmb_extra">
+
+
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/moneyproduct.js"></script>
+
+  <!--渲染商品详情-->
+  <script type="text/template" id="moneyproduct">
+    <h3>{{result[0].productName}}</h3>
+    <div class="subtitle">
+      <span>{{result[0].productFrom}}</span>
+      <span>{{result[0].productTime}}</span>
+      <span>{{result[0].productTips}}</span>
+    </div>
+    <div class="content">
+      {{@result[0].productImgSm}}
+      <p>{{result[0].productInfo2}}</p>
+      <p>{{result[0].productInfo}}</p>
+      {{@result[0].productImg2}}
+    </div>
+
+  </script>
+  <!--渲染商品订单城市评价等额外内容-->
+  <script type="text/template" id="extra">
+    {{@result[0].productCity}}
+    <div class="goLink">
+      前往购买
+    </div>
+    <div class="wechatCode">
+      <img src="images/mmbweixin2.png" alt="">
+    </div>
+    {{@result[0].productComment}}
+  </script>
+
+
+</body>
+
+</html>

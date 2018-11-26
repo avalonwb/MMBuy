@@ -1,0 +1,136 @@
+.middle {
+  background-color: #fff;
+}
+.middle .promsg .msg {
+  width: 100%;
+  padding: 0.26666667rem;
+  background-color: #fff;
+}
+.middle .promsg .msg h1 {
+  text-align: center;
+  font-size: 0.4rem;
+}
+.middle .promsg .msg img {
+  display: block;
+  margin: 0 auto;
+  width: 4.4rem;
+}
+.middle .promsg .msg .icon-collect {
+  width: 0.93333333rem;
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  border-radius: 50%;
+  transform: translateX(8rem);
+  background-image: linear-gradient(to bottom, #96d900, #008000);
+  text-align: center;
+  color: azure;
+  box-shadow: 0.04rem 0.04rem 0.04rem #cccccc;
+}
+.middle .more ul {
+  border-top: 1px solid #bb3e04;
+  border-bottom: 1px solid #bb3e04;
+}
+.middle .more ul li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  height: 0.86666667rem;
+  line-height: 0.86666667rem;
+  font-size: 0.33333333rem;
+  color: aliceblue;
+}
+.middle .more ul li:nth-child(1) {
+  background-image: linear-gradient(to bottom, #ff9b1a, #ffa500);
+}
+.middle .more ul li:nth-child(2),
+.middle .more ul li:nth-child(3) {
+  border-left: 1px solid #bb3e04;
+  border-right: 1px solid #bb3e04;
+  background-image: linear-gradient(to bottom, #ffc831, #ffa500);
+}
+.middle .more .from {
+  padding: 0.2rem 0.33333333rem;
+  height: 1.17333333rem;
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.middle .more .from i:nth-of-type(1) {
+  float: left;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url("../images/slogo.png") no-repeat;
+  background-size: 0.4rem 0.4rem;
+  margin-top: 0.2rem;
+}
+.middle .more .from i:nth-of-type(2) {
+  float: right;
+  margin-top: 0.17333333rem;
+  font-size: 0.4rem;
+  margin-right: 0.2rem;
+}
+.middle .more .from span {
+  float: left;
+  font-size: 0.33333333rem;
+  margin-top: 0.17333333rem;
+  margin-left: 0.2rem;
+}
+.middle .more .from button {
+  float: right;
+  width: 1.33333333rem;
+  height: 0.62666667rem;
+  margin-top: 0.13333333rem;
+  font-size: 0.24rem;
+  color: azure;
+  background-color: #ff4f00;
+  border-radius: 0.10666667rem;
+}
+.middle .more p {
+  padding: 0.2rem 0.26666667rem;
+  color: #666;
+}
+.middle .comment {
+  padding: 0.26666667rem 0;
+}
+.middle .comment .title {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  font-size: 0.33333333rem;
+  font-weight: normal;
+  color: black;
+  background-color: #ccc;
+}
+.middle .comment .list {
+  padding: 0.26666667rem;
+}
+.middle .comment .list li {
+  padding-bottom: 0.2rem;
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.middle .comment .list li p:nth-child(1) {
+  padding-top: 0.13333333rem;
+}
+.middle .comment .list li p:nth-child(1) span:nth-child(1) {
+  float: left;
+  color: #666;
+}
+.middle .comment .list li p:nth-child(1) span:nth-child(2) {
+  float: right;
+  color: #666;
+}
+.middle .comment .list li p:nth-child(2) {
+  padding: 0.13333333rem 0;
+}
+.middle .comment .list li p:nth-child(2) span {
+  float: right;
+  height: 0.4rem;
+  color: #666;
+}
+.middle .comment .list li p:nth-child(3) {
+  padding-top: 0.2rem;
+  text-align: justify;
+  line-height: 0.53333333rem;
+}
+.middle .moreBtn {
+  margin-left: 1.09333333rem;
+  margin-bottom: 0.4rem;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <title>index</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="app">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </div>
+    <div class="mmb_search">
+      <div class="input">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="button">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+    <div class="mmb_nav">
+      <ul>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="category.html">
+            <img src="images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mmb_recommend">
+      <div class="title">
+        <i class="icon_right"></i>
+        <p>超值折扣推荐</p>
+      </div>
+      <div class="recom_content">
+        <ul>
+          <li class="item">
+            <a href="#">
+              <div class="img">
+                <img src="images/jiangyou.jpg" alt="">
+              </div>
+              <div class="desc">
+                <div class="top clearfix">
+                  <span class="fl">移动端凑单品：海天 鲜味 生抽 1.28L</span>
+                  <span class="colff6c00 fl">10.9元</span>
+                </div>
+                <div class="bottom">
+                  <span class="fl">京东商城 | 10-25 14:10</span>
+                  <span class="fr">1</span>
+                </div>
+              </div>
+
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <div class="img">
+                <img src="images/jiangyou.jpg" alt="">
+              </div>
+              <div class="desc">
+                <div class="top clearfix">
+                  <span class="fl">移动端凑单品：海天 鲜味 生抽 1.28L</span>
+                  <span class="colff6c00 fl">10.9元</span>
+                </div>
+                <div class="bottom">
+                  <span class="fl">京东商城 | 10-25 14:10</span>
+                  <span class="fr">1</span>
+                </div>
+              </div>
+
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <div class="img">
+                <img src="images/jiangyou.jpg" alt="">
+              </div>
+              <div class="desc">
+                <div class="top clearfix">
+                  <span class="fl">移动端凑单品：海天 鲜味 生抽 1.28L</span>
+                  <span class="colff6c00 fl">10.9元</span>
+                </div>
+                <div class="bottom">
+                  <span class="fl">京东商城 | 10-25 14:10</span>
+                  <span class="fr">1</span>
+                </div>
+              </div>
+
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="more">
+        <a href="#">
+          更多优惠信息>>
+        </a>
+      </div>
+    </div>
+    <div class="mmb_brand">
+      <i class="icon_right"></i>
+      <p>品牌排行</p>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="login.html">登录</a>
+        <a href="reg.html">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/index.js"></script>
+
+  <script type="text/template" id="getindexmenu">
+    {{each result v i}}
+    <li class="nav{{i==7?' more':''}}{{i>7?' hide':''}}" data-indexmenuid="{{ v.indexmenuId }}">
+      <a href="{{v.titlehref}}">
+        {{@v.img}}
+        <p>{{ v.name }}</p>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+  <script type="text/template" id="getmoneyctrl">
+    {{each result v i}}
+    <li class="item" data-productId="{{v.productId}}">
+      <a href="moneyproduct.html?productid={{v.productId}}">
+        <div class="img">
+          {{@v.productImgSm}}
+        </div>
+        <div class="desc">
+          <div class="top clearfix">
+            {{v.productName}}
+            <span class="colff6c00">{{v.productPinkage}}</span>
+          </div>
+          <div class="bottom">
+            <span class="fl">{{v.productFrom}} | {{v.productTime}}</span>
+            <span class="fr">{{v.productComCount}}</span>
+          </div>
+        </div>
+
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+
+</body>
+
+</html>

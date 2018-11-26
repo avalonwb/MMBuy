@@ -1,0 +1,108 @@
+@import "normalize";
+@import "base";
+@import "vairable";
+@import "adapter";
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+
+  background-color: #fff;
+  margin: 0 auto;
+
+}
+.mmb_header {
+  height: 50rem/@base;
+  background-color: #f4483e;
+  border-bottom: 1rem/@base solid #f6675e;
+  overflow: hidden;
+  .back {
+    float: left;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 14rem/@base;
+    background: url(../images/icback.svg) no-repeat;
+    background-size: 20rem/@base 20rem/@base;
+    background-clip: content-box;
+    background-origin: content-box;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 18rem/@base;
+    text-align: center;
+    overflow: hidden;
+    line-height: 48rem/@base;
+
+  }
+  .app {
+    float: right;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 7rem/@base;
+
+  }
+}
+
+.mmb_footer {
+  background-color: #efefef;
+  .top {
+    border-top: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+    a {
+      display: block;
+      float: left;
+      width: 33.33%;
+      height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+      line-height: 32rem/@base;
+    }
+    .toTop {
+      border-right: none;
+    }
+  }
+  .bottom {
+    border-top: 1rem/@base solid #c4c4c4;
+    height: 62rem/@base;
+    font-size: 12rem/@base;
+    padding: 15rem/@base 0;
+    text-align: center;
+    .downApp {
+
+      .colred {
+        color: red;
+      }
+    }
+    .col666{
+      color: #666;
+    }
+  }
+}
+
+.mmb_coupon {
+  background-color: #fff;
+  padding: 15rem/@base 5rem/@base;
+  margin-bottom: 10rem/@base;
+  .couponBox {
+    overflow: hidden;
+  }
+  .couponList {
+    margin-right: 5rem/@base;
+    width: 32%;
+    height: 82rem/@base;
+    border: 1rem/@base solid #f7f7f7;
+    float: left;
+    padding: 5rem/@base 0;
+    img {
+      width: 50rem/@base;
+      height: 50rem/@base;
+      margin: 0 auto;
+    }
+    p {
+      text-align: center;
+      font-size: 14rem/@base;
+      line-height: 22rem/@base;
+    }
+  }
+}

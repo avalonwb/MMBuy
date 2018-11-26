@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <i class="back" onclick="javascript:history.back(-1)"></i>
+      <img src="images/header_app.png" class="app" alt="">
+      <h3>白菜价-淘宝内部券</h3>
+    </div>
+    <div class="mmb_bcjNav">
+      <ul class="navBox clearfix">
+        <li class="navList active">
+          <a href="#">
+            全部
+          </a>
+        </li>
+      </ul>
+      
+    </div>
+    <div class="mmb_bcjContent">
+      <ul class="bcjBox">
+        <li class="bcjList">
+          <a href="#">
+            <div class="img">
+              <img src="images/bcj.jpg" alt="">
+            </div>
+            <div class="desc">
+              <div class="title">
+                <span class="b">[包邮]</span>双十一红包 今日开启</div>
+              <div class="price">
+                <i>券后</i>
+                <em>¥</em>0.0
+                <del>¥0</del>
+              </div>
+              <div class="bar clearfix">
+                <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=9ae7b2e605b74a9d9bf48f4bdb796f3c&amp;sellerId=2551982558"
+                  class="goquan" target="_blank"></a>
+                <i>
+                  <em style="width:2%;"></em>
+                  <span>2%</span>
+                </i>
+                <b>已领112张</b>
+              </div>
+              <div class="couLink">
+                <a href="#" target="_blank">点此领10元优惠券</a>
+              </div>
+              <div class="shopLink">
+                <a href="#">下单链接</a>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/IScroll/iscroll.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/baicaijia.js"></script>
+
+  <script type="text/template" id="navList">
+    {{each result v i}}
+    <li class="navList">
+      <a href="javascript:;" data-titleId="{{v.titleId}}">
+        {{v.title}}
+      </a>
+    </li>
+    {{/each}}
+
+  </script>
+
+  <script type="text/template" id="bcjList">
+    {{each result v i}}
+    <li class="bcjList">
+      <a href="#">
+        <div class="img">
+          {{@v.productImg}}
+        </div>
+        <div class="desc">
+          <div class="title">{{@v.productName}}</div>
+          <div class="price">
+            <i></i>{{@v.productPrice}}</div>
+          {{@v.productCouponRemain}}
+          <div class="couLink">
+            {{@v.productCoupon}}
+          </div>
+          <div class="shopLink">
+            {{@v.productHref}}
+          </div>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+</body>
+
+</html>

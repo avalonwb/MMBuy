@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主页</title>
+  <link rel="stylesheet" href="lib/animate.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/detail.css">
+  
+  <style>
+
+  </style>
+  <script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="main">
+
+      <!-- site-top -->
+      <div class="site-top">
+        <div class="logo"></div>
+        <div class="app"></div>
+      </div>
+
+      <!-- search -->
+      <div class="search clearfix">
+        <input type="text" placeholder="输入你想比价的内容">
+        <button>搜索</button>
+      </div>
+      
+      <!-- middle -->
+      <div class="middle">
+         
+        <!-- 面包屑 + 标题框 -->
+        <div class="promsg">
+           <!-- 施工中 -->
+        </div>
+
+        <!-- 剩余部分 -->     
+        <div class="more">
+          <ul class="clearfix">
+             <li>比价剁手</li>
+             <li>花里胡哨</li>
+             <li>差评( +∞ )</li>
+          </ul>
+          <div class="from clearfix">
+             <i class="slogo"></i>
+             <span>京西商城</span>
+             <button>三思而剁手</button>
+             <i class="red">$9999</i>
+          </div>
+          <p class="tips">
+            *实际价格我们也不知道,但我们提供的价格可能有数小时或数日的延迟怎么想都是你们的错!!!
+          </p>
+        </div>
+
+        <!-- comments -->
+        <div class="comment">
+          <h3 class="title">水军上岗记录</h3>
+          <ul class="list">
+            <!-- 评论坑 -->
+          </ul>
+        </div>
+      
+        <button class="moreBtn">你不会想看更多的 >></button>
+         
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <ul class="clearfix">
+          <li>登录</li>
+          <li>注册</li>
+          <li id="goTop"><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="last">
+          <p><span class="red">手机app卸载</span>MMP手机版<i>--掌上比价平台</i></p>
+          <p>m.mmmmp.com</p>
+        </div>
+      </div>
+
+      <!-- tips -->
+      <div class="tip">
+        <div class="warning animated bounceInDown">
+          <h3>你怎么回事小老弟,别乱输</h3>
+          <div class="btns">
+             <button class="no">就不</button>
+             <button class="yes">好吧</button>
+          </div>
+        </div>
+      </div>     
+   
+    </div>
+  </div>
+
+
+<!-- 面包屑坑+介绍坑 -->
+<script type="text/template" id="breadTmp">
+
+  <div class="bread">
+    <a href="index.html">首页 ></a>
+    <a href="{{ more.reUrl }}">{{ more.cate }} ></a>
+     
+    <a href="#"><%= result[0].productName.split(" ")[0] %> ></a>
+     
+    <button class="btn">筛选</button>
+  </div>
+
+  <div class="msg">
+     <h1>{{ result[0].productName }}</h1>
+     {{@ result[0].productImg }}
+     <div class="icon-collect">收藏</div>
+  </div>
+
+</script>
+
+<!-- 评论坑 -->
+<script type="text/template" id="comTmp">
+ {{ each result ele index }}
+  <li>
+   <p class="clearfix">
+     <span class="name">{{ ele.comName }}</span>
+     <span class="time">{{ ele.comTime }}</span>
+   </p>
+   <p class="clearfix"><span class="from">{{ ele.comFrom }}</span></p>
+   <p class="txt">{{ ele.comContent }}</p>
+  </li>
+ {{ /each }}
+</script>
+
+<script src="lib/jQuery/jquery-1.12.4.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
+<script src="js/common.js"></script>
+<script src="js/detail.js"></script>
+
+<script>
+</script>
+</body>
+
+</html>

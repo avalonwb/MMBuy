@@ -1,0 +1,187 @@
+
+@import "var";
+
+
+.middle {
+  background-color: #fff;
+
+  .promsg {
+    .msg {
+      width: 100%;
+      padding: 20rem/@base;
+      background-color: #fff;
+      
+      h1 {
+        text-align: center;
+        font-size: 30rem/@base;
+      }
+    
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 330rem/@base;
+      }
+    
+      .icon-collect {
+        width: 70rem/@base;
+        height: 70rem/@base;
+        line-height: 70rem/@base;
+        border-radius: 50%;
+        transform: translateX(600rem/@base);
+        background-image:linear-gradient(to bottom ,#96d900,green) ;
+        text-align: center;
+        color: azure;
+        box-shadow: 3rem/@base 3rem/@base 3rem/@base #ccc;
+      }
+    }
+  }
+
+  .more {
+    
+    ul {
+      border-top: 1px solid #bb3e04;
+      border-bottom: 1px solid #bb3e04;
+
+      li {
+        float: left;
+        width: 33.3%;
+        text-align: center;
+        height: 65rem/@base;
+        line-height: 65rem/@base;
+        font-size: 25rem/@base;
+        color: aliceblue;
+        
+        &:nth-child(1) {
+          background-image: linear-gradient(to bottom,#ff9b1a,orange);
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-left: 1px solid #bb3e04;
+          border-right: 1px solid #bb3e04;
+          background-image: linear-gradient(to bottom,#ffc831,orange);
+        }
+
+      }
+
+    }
+
+    .from {
+      padding: 15rem/@base 25rem/@base;
+      height: 88rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+
+      i {
+
+        &:nth-of-type(1) {
+          float: left;
+          width: 30rem/@base;
+          height: 30rem/@base;
+          background: url("../images/slogo.png") no-repeat;
+          background-size: 30rem/@base 30rem/@base;
+          margin-top: 15rem/@base;
+        }
+
+        &:nth-of-type(2) {
+           float: right;
+           margin-top: 13rem/@base;
+           font-size: 30rem/@base;
+           margin-right: 15rem/@base;
+        }
+
+      }
+
+      
+      span {
+        float: left;
+        font-size: 25rem/@base;
+        margin-top: 13rem/@base;
+        margin-left: 15rem/@base;
+      }
+
+      button {
+        float: right;
+        width: 100rem/@base;
+        height: 47rem/@base;
+        margin-top: 10rem/@base;
+        font-size: 18rem/@base;
+        color: azure;
+        background-color: #ff4f00;
+        border-radius: 8rem/@base;
+      }
+    }
+
+    p {
+      padding: 15rem/@base 20rem/@base;
+      color: #666;
+    }
+
+  }
+
+  .comment {
+    padding: 20rem/@base 0;
+
+    .title {
+      height: 60rem/@base;
+      line-height: 60rem/@base;
+      text-align: center;
+      font-size: 25rem/@base;
+      font-weight: normal;
+      color: black;
+      background-color: #ccc;
+    }
+
+    .list {
+      padding: 20rem/@base;  
+
+      li {
+        padding-bottom: 15rem/@base;
+        border-bottom: 1rem/@base solid #ccc;
+        
+        p {
+          
+          &:nth-child(1) {
+            padding-top: 10rem/@base;
+
+            span {
+              &:nth-child(1) {
+                float: left;
+                color: #666;
+              }
+               
+              &:nth-child(2) {
+                float: right;
+                color: #666;
+              } 
+            }
+           
+          } 
+
+          &:nth-child(2) {
+            padding: 10rem/@base 0;
+            
+            span {
+              float: right;
+              height: 30rem/@base;
+              color: #666;
+            }
+          }
+
+          &:nth-child(3) {
+            padding-top: 15rem/@base;
+            text-align: justify;
+            line-height: 40rem/@base;
+          }
+
+        }      
+      }
+    }
+  }
+
+  .moreBtn {
+    margin-left: 82rem/@base;
+    margin-bottom: 30rem/@base;
+  }
+  
+}
+

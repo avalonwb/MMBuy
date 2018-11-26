@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bijia.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="app">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </div>
+    <div class="mmb_search">
+      <div class="input">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="button">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+    <div class="mmb_bijia">
+      <div class="title">
+        <div class="three">
+          <a href="#">首页</a>
+          <span>></span>
+          <a href="#">电视</a>
+          <span>></span>
+          <a href="#">乐视TV(Letv)S50</a>
+          <span>></span>
+        </div>
+        <div>
+          <button class="select">筛选</button>
+        </div>
+
+      </div>
+      <div class="desc">
+        <h3>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h3>
+        <img src="images/tv.png" alt="">
+        <button class="collect">
+          收藏
+        </button>
+      </div>
+      <div class="function">
+        <div class="buy active">比价购买</div>
+        <div class="param">产品参数</div>
+        <div>评价（2322）</div>
+      </div>
+      <div class="goShop">
+        <div class="shopTop"></div>
+        <div class="bottom">
+          * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+
+      </div>
+
+    </div>
+    <div class="mmb_evaluate">
+      <div class="evaTop">
+        网友评价
+      </div>
+      <ul class="comBox">
+        <li class="comList">
+          <a href="#">
+            <div class="comTitle">
+              <span class="fl">啥***?</span>
+              <span class="fr">2014/7/24</span>
+              <span class=" comFrom">购买自：亚马逊</span>
+            </div>
+            <div class="comContent">
+              关注豆浆机一段时间了，豆浆机九阳还是很靠谱的，主流B2C商城基本上399算最低价了，实体店看了几家都599，有个网站虽然常年399但华南区不在优惠范围。说说这款机器，这次亚马逊不加箱子，直接豆浆机原箱子包一层胶纸就送来了，箱子压了一点但里面没事。九阳宣传的2014最新是速磨免滤技术，但这技术出来的几款机器看样子都不大喜欢，最后都一一排除了。这款D58SG算是上一代的主打款，集聚了九阳几乎所有的看家本领，整体外观大气优雅（我挺喜欢宣传图上有个“倍浓植物奶牛”的贴纸的，到货看到是没有的有点可惜）。以前买过九阳的200多的无网款式，具体型号忘了，就两者简单对比一下吧：1、声音上，老款是火车声，这款是动车声，强劲有力，声音流畅浑厚，完全在接受范围；2、做工上，感觉杯体没有老款厚重，是304钢材贵所以用薄了吗？但不知道是不是钢材材质的原因，这款感觉更好清洗一些，用完尽快清洗，手洗就能干净。另外，底部确实有不平的痕迹，这点九阳还要再加强工艺啊。3、功能上，自然是新款多，海拔适应功能对于平时家庭一般使用没什么实际用处，但刚刚做了倍浓豆浆，口感顺滑，制浆细腻。4、使用上，时间都差不多，感觉这款更快一些，另外，不锈钢制品使用过都会有点变色的，不用太纠结这个。值得推荐的一款豆浆机！
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mmb_moreCom">
+      <a class="moreCom" href="javascript:;">
+        查看更多评价
+      </a>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/bijia.js"></script>
+
+  <!--商品详情-->
+  <script type="text/template" id="getproduct">
+    <h3>{{result[0].productName}}</h3>
+    {{@result[0].productImg}}
+    <button class="collect">
+      收藏
+    </button>
+
+  </script>
+
+  <!--去购买按钮-->
+  <script type="text/template" id="goShop">
+    {{@result[0].bjShop}}
+  </script>
+
+  <!--商品评价-->
+  <script type="text/template" id="getproductcom">
+    {{each result v i }}
+    <li class="comList">
+      <a href="#">
+        <div class="comTitle">
+          <span class="fl">{{v.comName}}</span>
+          <span class="fr">{{v.comTime}}</span>
+          <span class=" comFrom">{{v.comFrom}}</span>
+        </div>
+        <div class="comContent">
+          {{v.comContent}}
+        </div>
+      </a>
+    </li>
+
+    {{/each}}
+  </script>
+
+  <!--根据分类id和商品id实现3级菜单-->
+  <script type="text/template" id="bijiaTitle">
+    <a href="index.html">首页</a>
+    <span>></span>
+    <a href="productlist.html?categoryid={{category.categoryId}}">{{category.category}}</a>
+    <span>></span>
+    <a href="javascript:;">{{productName}}</a>
+    <span>></span>
+  </script>
+
+</body>
+
+</html>

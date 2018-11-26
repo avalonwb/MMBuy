@@ -1,0 +1,227 @@
+@import "normalize";
+@import "base";
+@import "vairable";
+@import "adapter";
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+
+  background-color: #f8f8f8;
+  margin: 0 auto;
+
+}
+.mmb_header {
+  height: 50rem/@base;
+  background-color: #f4483e;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+  .back {
+    float: left;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 14rem/@base;
+    background: url(../images/icback.svg) no-repeat;
+    background-size: 20rem/@base 20rem/@base;
+    background-clip: content-box;
+    background-origin: content-box;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 18rem/@base;
+    text-align: center;
+    overflow: hidden;
+    line-height: 48rem/@base;
+
+  }
+  .app {
+    float: right;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 7rem/@base;
+
+  }
+}
+
+.mmb_footer {
+  background-color: #efefef;
+  .top {
+    border-top: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+    a {
+      display: block;
+      float: left;
+      width: 33.33%;
+      height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+      line-height: 32rem/@base;
+    }
+    .toTop {
+      border-right: none;
+    }
+  }
+  .bottom {
+    border-top: 1rem/@base solid #c4c4c4;
+    height: 62rem/@base;
+    font-size: 12rem/@base;
+    padding: 15rem/@base 0;
+    text-align: center;
+    .downApp {
+
+      .colred {
+        color: red;
+      }
+    }
+    .col666{
+      color: #666;
+    }
+  }
+}
+
+.mmb_bcjNav {
+  background-color: #fff;
+  height: 46rem/@base;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 5rem/@base;
+  position: relative;
+  .navBox {
+    width: 800rem/@base;
+  }
+  .navList {
+    float: left;
+    margin: 0 13rem/@base;
+    line-height: 44rem/@base;
+
+    a {
+      display: block;
+      font-size: 14rem/@base;
+    }
+  }
+  .navList.active a{
+    border-bottom: 2rem/@base solid #e4393c;
+    color: #e4393c;
+  }
+  .rightSearch {
+    width: 38rem/@base;
+    height: 42rem/@base;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}
+
+.mmb_bcjContent {
+  .bcjBox {
+    margin-bottom: 30rem/@base;
+  }
+  .bcjList {
+    margin-bottom: 5rem/@base;
+    background-color: #fff;
+    height: 150rem/@base;
+    padding: 12rem/@base 6rem/@base;
+    .img {
+      margin-right: 5rem/@base;
+      float: left;
+      img{
+        width: 130rem/@base;
+        height: 130rem/@base;
+      }
+    }
+    .desc {
+      overflow: hidden;
+      font-size: 14rem/@base;
+      position: relative;
+      height: 125rem/@base;
+      .title{
+        line-height: 1.5;
+        margin-bottom: 6rem/@base;
+      }
+      .price {
+        color: #fc353a;
+        font-size: 24rem/@base;
+        margin-bottom: 15rem/@base;
+        i {
+          font-size: 16rem/@base;
+          font-style: normal;
+          margin-right: 4rem/@base;
+        }
+        em {
+          font-size: 12rem/@base;
+          font-style: normal;
+        }
+        del {
+          font-size: 13rem/@base;
+          color: #a8a8a8;
+          margin-left: 12rem/@base;
+        }
+      }
+      .bar {
+        i {
+          width: 82rem/@base;
+          height: 14rem/@base;
+          border: 1rem/@base solid #fc353a;
+          border-radius: 6rem/@base;
+          background-color: #ffb7b7;
+          position: absolute;
+          bottom: 35rem/@base;
+          left: 0;
+          em {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 34%;
+            height: 100%;
+            background-color: #fc353a;
+            border-radius: 8rem/@base;
+          }
+          span {
+            color: #ffffff;
+            font-size: 12rem/@base;
+            position: absolute;
+            top: -1rem/@base;
+            left: 50%;
+            transform: translateX(-50%);
+            font-style: normal;
+          }
+        }
+        b {
+          color: #fc353a;
+          position: absolute;
+          bottom: 35rem/@base;
+          left: 100rem/@base;
+        }
+      }
+      .couLink {
+        position: absolute;
+        bottom: 0rem/@base;
+        left: 0;
+        border: 1px dotted #e4393c;
+        text-align: center;
+        height: 26rem/@base;
+        line-height: 26rem/@base;
+        padding: 0 5rem/@base;
+        font-size: 12rem/@base;
+      }
+      .shopLink {
+        position: absolute;
+        bottom: 0rem/@base;
+        right: 0;
+        background-color: #ff5e5d;
+        height: 28rem/@base;
+        line-height: 28rem/@base;
+        font-size: 12rem/@base;
+        padding: 0 5rem/@base;
+        border-radius: 5rem/@base;
+        >a {
+          color: #ffffff;
+        }
+      }
+    }
+
+  }
+}

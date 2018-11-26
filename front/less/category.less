@@ -1,0 +1,59 @@
+
+@import "var";
+
+/*  分类页  */
+
+.middle {
+  border: 2rem/@base solid #ccc;
+  border-radius: 15rem/@base; 
+
+  .box {
+    overflow: hidden; 
+    transition: all 1s ease;
+
+    .title {
+      width: 100%;
+      height: 80rem/@base;
+      background-color: #ededed;
+      border-bottom: 1rem/@base solid #ccc;
+
+      span {
+        float: left;
+        font-size: 32rem/@base;
+        margin: 15rem/@base 0 0 32rem/@base;
+      }
+
+      .arrow {
+        float: right;
+        width: 30rem/@base;
+        height: 7rem/@base;
+        margin: 35rem/@base 28rem/@base 0 0;
+        background: url("../images/arrow1.gif") no-repeat;
+        background-size: 30rem/@base 7rem/@base;
+        transform: scale(3);
+      }
+    }
+
+    .list {
+      display: none;
+
+      li {
+        float: left;
+        width: 33.3%;
+        border-bottom: 1rem/@base solid #ccc;
+        border-right: 1rem/@base solid #ccc;
+        
+        &:nth-child(3n+3) {
+          border-right: none;
+        }
+
+        a {
+          display: block;
+          text-align: center;
+          height: 78rem/@base;
+          line-height: 78rem/@base;
+        }
+      }
+    }
+  }
+}

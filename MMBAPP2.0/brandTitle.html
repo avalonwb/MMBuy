@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/brandTitle.css">
+  <title>Title</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="app">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </div>
+    <div class="mmb_search">
+      <div class="input">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="button">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+
+    <div class="mmb_topMenu">
+      <a href="index.html">首页</a>
+      <span>></span>
+      <a href="category.html">全部分类</a>
+      <span>></span>
+    </div>
+    <div class="mmb_brandTitle">
+      <div class="title">热门品牌排行</div>
+      <ul class="titleBox">
+        <li class="titleList">
+          <a href="#">平板电视十大品牌</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/brandTitle.js"></script>
+
+  <script type="text/template" id="titlelist">
+    {{each result v i}}
+    <li class="titleList" data-brandtitleid="{{v.brandTitleId}}" data-categoryid="{{v.categoryId}}" }>
+      <a href="brand.html?brandtitleid={{v.brandTitleId}}">{{v.brandTitle}}</a>
+    </li>
+    {{/each}}
+
+  </script>
+
+</body>
+
+</html>

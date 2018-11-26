@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>category</title>
+  <link rel="stylesheet" href="css/category.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="app">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </div>
+    <div class="mmb_search">
+      <div class="input">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="button">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+    <div class="mmb_category">
+      <ul class="itemBox">
+        <li class="item">
+          <a href="#">大家电</a>
+          <ul class="subBox">
+            <li class="subItem">
+              <a href="#">家电</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/category.js"></script>
+
+  <script type="text/template" id="titleList">
+    {{each result v i}}
+    <li class="item">
+      <a href="javascript:;" data-titleid="{{v.titleId}}">{{v.title}}</a>
+      <ul class="subBox">
+      </ul>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/template" id="cateList">
+    {{each result v i}}
+    <li class="subItem">
+      <a href="productlist.html?categoryid={{v.categoryId}}">{{v.category}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+
+</body>
+
+</html>

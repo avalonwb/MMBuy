@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/productlist.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="app">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </div>
+    <div class="mmb_search">
+      <div class="input">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="button">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+
+    <div class="mmb_productlist">
+      <div class="title">
+        <div class="three">
+          <a href="#">首页</a>
+          <span>></span>
+          <a href="#">全部分类</a>
+          <span>></span>
+          <a href="#">电视</a>
+          <span>></span>
+        </div>
+        <div>
+          <button class="select">筛选</button>
+        </div>
+
+      </div>
+
+      <ul class="proItemBox">
+        <li class="proItem">
+          <a href="#">
+            <div class="img">
+              <img src="images/tv.png" alt="">
+            </div>
+            <div class="desc">
+              <div class="top clearfix">
+                <span class="fl">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</span>
+              </div>
+              <div class="bottom">
+                <div class="price">￥1999.00</div>
+                <span class="fl">报价(6)</span>
+                <span class="fl">评论(2286)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <div class="paging clearfix">
+        <div class="fl">
+          <button class="prev">上一页</button>
+        </div>
+        <div class="fl">
+          <div class="currPage">
+            <span>1/3</span>
+            <ul class="morePage">
+              <li>1/3</li>
+              <li>2/3</li>
+              <li>3/3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fl">
+          <button class="next">下一页</button>
+        </div>
+      </div>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/productlist.js"></script>
+
+  <!--根据categoryid获取分类名-->
+  <script type="text/template" id="getcategorybyid">
+    <a href="index.html">首页</a>
+    <span>></span>
+    <a href="category.html">全部分类</a>
+    <span>></span>
+    <a href="#">{{result[0].category}}</a>
+    <span>></span>
+  </script>
+
+  <!--商品列表-->
+  <script type="text/template" id="productlist">
+    {{each result v i}}
+    <li class="proItem" data-productId="{{v.productId}}">
+      <a href="bijia.html?productid={{v.productId}}" data-brandName="{{v.brandName}}">
+        <div class="img">
+          {{@v.productImg}}
+        </div>
+        <div class="desc">
+          <div class="top clearfix">
+            <span class="fl two">{{v.productName}}</span>
+          </div>
+          <div class="bottom">
+            <div class="price">{{v.productPrice}}</div>
+            <span class="fl">{{v.productQuote}}</span>
+            <span class="fl">{{v.productCom}}</span>
+          </div>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/template" id="pageCount">
+    <% for(i = 0; i < pageCount; i++) {%>
+      <li>
+        <%=i+1%>/<%=pageCount%>
+      </li>
+    <%}%>
+  </script>
+
+</body>
+
+</html>

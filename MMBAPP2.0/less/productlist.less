@@ -1,0 +1,224 @@
+@import "normalize";
+@import "base";
+@import "vairable";
+@import "adapter";
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+
+  background-color: #fff;
+  margin: 0 auto;
+
+}
+.mmb_header {
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+  .logo {
+    float: left;
+    padding: 12rem/@base;
+    img{
+      width: auto;
+      height: 25rem/@base;
+    }
+  }
+  .app {
+    float: right;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 7rem/@base;
+
+  }
+}
+.mmb_search {
+  height: 50rem/@base;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+
+  .input {
+    overflow: hidden;
+    margin: 10rem/@base;
+    height: 30rem/@base;
+    padding-right: 73rem/@base;
+    input {
+      width: 100%;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      background-color: #f1f1f1;
+      border-radius: 15rem/@base;
+      text-indent: 20rem/@base;
+      font-size: 14rem/@base;
+    }
+  }
+  .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 63rem/@base;
+    height: 30rem/@base;
+    margin: 10rem/@base;
+    input {
+      width: 100%;
+      height: 100%;
+      line-height: 30rem/@base;
+      text-decoration: none;
+      border: none;
+      border-radius: 15rem/@base;
+      background-color: @mainColor;
+      text-align: center;
+      font-size: 16rem/@base;
+      color: #ffffff;
+      outline-style: none;
+      -webkit-tap-highlight-color: rgba(255,255,255,0);
+    }
+  }
+}
+.mmb_footer {
+  background-color: #efefef;
+  .top {
+    border-top: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+    a {
+      display: block;
+      float: left;
+      width: 33.33%;
+      height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+      line-height: 32rem/@base;
+    }
+    .toTop {
+      border-right: none;
+    }
+  }
+  .bottom {
+    border-top: 1rem/@base solid #c4c4c4;
+    height: 62rem/@base;
+    font-size: 12rem/@base;
+    padding: 15rem/@base 0;
+    text-align: center;
+    .downApp {
+
+      .colred {
+        color: red;
+      }
+    }
+    .col666{
+      color: #666;
+    }
+  }
+}
+
+.mmb_productlist {
+  .title{
+    height: 38rem/@base;
+    line-height: 38rem/@base;
+    border-top: 1rem/@base solid #ebebeb;
+    border-bottom: 1rem/@base solid #ccc;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+    padding-left: 8rem/@base;
+    font-size: 14rem/@base;
+    position: relative;
+    .select {
+      line-height: 28rem/@base;
+      width: 60rem/@base;
+      height: 28rem/@base;
+      position: absolute;
+      top: 5rem/@base;
+      right: 5rem/@base;
+      background-color: #d0d0d0;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#d7d7d7), to(#f5f5f5));
+      outline-style: none;
+      border: none;
+      border-bottom: 1rem/@base solid #bababa;
+      box-shadow: 0 1rem/@base 2rem/@base #888;
+      border-radius: 5rem/@base;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+  }
+  .proItem {
+
+      border-bottom: 1rem/@base solid #e7e7e7;
+      height: 129rem/@base;
+      padding: 14rem/@base 8rem/@base;
+
+      .img {
+        width: 100rem/@base;
+        height: 100rem/@base;
+        float:left;
+        margin-right: 10rem/@base;
+        img{
+          width: 100rem/@base;
+          height: 100rem/@base;
+        }
+      }
+      .desc {
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+        .top{
+          font-size: 15rem/@base;
+          color: #333333;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          font-size: 14rem/@base;
+
+        }
+        .bottom {
+          color: #a1a1a1;
+          font-size: 12rem/@base;
+          width: 100%;
+          position: absolute;
+          bottom: 5rem/@base;
+          left: 0;
+          .price {
+            font-size: 18rem/@base;
+            color: #ea3900;
+          }
+          span {
+            margin-right: 10rem/@base;
+          }
+        }
+      }
+    }
+
+  .paging {
+
+    height: 38rem/@base;
+    margin-top: 10rem/@base;
+    >div {
+      width: 33.33%;
+      text-align: center;
+      line-height: 33rem/@base;
+      font-size: 14rem/@base;
+    }
+    button{
+      width: 82rem/@base;
+      height: 33rem/@base;
+      outline-style: none;
+    }
+    .currPage {
+      margin: 0 auto;
+      width: 77rem/@base;
+      height: 36rem/@base;
+      line-height: 36rem/@base;
+      border: 1rem/@base solid #ccc;
+      position: relative;
+    }
+    .morePage {
+      position: absolute;
+      top: 33rem/@base;
+      left: -1rem/@base;
+      border: 1rem/@base solid #ccc;
+      background-color: #fff;
+      width: 77rem/@base;
+      display: none;
+    }
+  }
+}

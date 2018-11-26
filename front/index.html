@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主页</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+
+  </style>
+  <script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="main">
+
+      <!-- site-top -->
+      <div class="site-top">
+        <div class="logo"></div>
+        <div class="app"></div>
+      </div>
+
+      <!-- search -->
+      <div class="search clearfix">
+        <input type="text" placeholder="输入你想比价的内容">
+        <button>搜索</button>
+      </div>
+
+      <!-- nav -->
+      <ul class="nav clearfix">
+        <!-- 动态坑 -->
+      </ul>
+
+      <!-- goods -->
+      <div class="goods">
+        <div class="title">
+          <span>炒鸡优惠这口</span>
+          <a href="#"></a>
+        </div>
+        <ul class="product">
+           <!-- 玩个蛇 -->
+        </ul>
+        <button class="moreBtn">你不会想看更多的 >></button>
+      </div>
+
+      <!-- rank -->
+      <div class="rank clearfix">
+         <span>品牌排行</span>
+         <img src="images/more.png" alt="">
+      </div>
+       
+      <!-- footer -->
+      <div class="footer">
+        <ul class="clearfix">
+          <li>登录</li>
+          <li>注册</li>
+          <li id="goTop"><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="last">
+          <p><span class="red">手机app卸载</span>MMP手机版<i>--掌上比价平台</i></p>
+          <p>m.mmmmp.com</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!--  导航模板  -->
+<script type="text/template" id="navTmp">
+  {{ each result ele index }}
+    <li style="{{ index > 7 ? 'display:none;' : '' }}">
+      <%  var urlArr = ["category.html","javascript:;","javascript:;",
+      "javascript:;","javascript:;","javascript:;","javascript:;",
+      "javascript:;","final.html","javascript:;","javascript:;","javascript:;"]  %>
+      <a href="<%= urlArr[index] %>" class="{{ ele.name == '更多' ? 'more' : '' }}"
+          data-id="{{ ele.indexmenuId }}">    
+        {{@ ele.img }}
+        <span class="text-nowarp">{{ ele.name }}</span>
+      </a>
+    </li>
+  {{ /each }}
+</script>
+
+<!-- 产品模板 -->
+<script type="text/template" id="proTmp">
+  {{ each result ele index }} 
+  <li>
+    <a href="#">
+      <div class="img">
+        {{@ ele.productImgLg }}
+      </div>
+      <div class="right">
+          <h2 class="top">
+            {{ ele.productName }}
+            <span class="red">{{ ele.productPinkage }}</span>
+          </h2>
+          <div class="bottom">
+            <span>{{ ele.productFrom }} | {{ ele.productTime }}</span>
+            <span>{{ ele.productComCount }}</span>
+          </div>
+      </div>
+    </a>
+  </li>
+  {{ /each }} 
+</script>
+
+<script src="lib/jQuery/jquery-1.12.4.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+<script>
+</script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主页</title>
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/final.css">
+
+  <style>
+
+  </style>
+  <script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+
+
+  <div class="main">
+
+    <!-- site-top -->
+    <div class="site-top">
+      <div class="logo"></div>
+      <div class="app"></div>
+    </div>
+
+    <!-- middle -->
+    <div class="middle">
+
+      <canvas id="canvas"></canvas>
+
+      <!-- 面包屑 -->
+      <div class="bread clearfix">
+
+        <div class="icon">
+          <i class="fa fa-cc-visa"></i>
+        </div>
+        <div class="left" data-type="shop">
+          <span class="sel">京西</span>
+          <i class="fa fa-steam-square"></i>
+        </div>
+        <div class="center" data-type="area">
+          <span class="sel">地球</span>
+          <i class="fa fa-github"></i>
+        </div>
+        <div class="right">
+          <span class="sel">全部价格</span>
+          <i class="fa fa-amazon"></i>
+        </div>
+        <ul class="select">
+           <!-- 深坑 -->
+        </ul> 
+
+      </div>
+
+      <!-- 列表 -->
+      <ul class="list clearfix">
+        <!-- 太坑 -->
+      </ul>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <ul class="clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li id="goTop"><img src="images/top.jpg" alt="">返回顶部</li>
+      </ul>
+      <div class="last">
+        <p><span class="red">手机app卸载</span>MMP手机版<i>--掌上比价平台</i></p>
+        <p>m.mmmmp.com</p>
+      </div>
+    </div>
+
+    <!-- tips -->
+    <div class="tip">
+      <div class="warning animated bounceInDown">
+        <h3>你怎么回事小老弟,别乱输</h3>
+        <div class="btns">
+          <button class="no">就不</button>
+          <button class="yes">好吧</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+<!-- 深坑 -->
+<script type="text/template" id="breadTmp">
+ 
+ {{ if whoAmI == "shop" }}
+ 
+  {{ each result ele index }}
+    <li data-msg="{{ ele.shopId }}" data-type="shop"><span class="txt">{{ ele.shopName }}</span><i class="fa fa-hand-lizard-o"></i></li>
+  {{ /each }} 
+
+ {{ else }}
+ 
+  {{ each result ele index }}
+    <li data-msg="{{ ele.areaId }}" data-type="area"><span class="txt">{{ ele.areaName }}</span><i class="fa fa-hand-lizard-o"></i></li>
+  {{ /each }} 
+
+ {{ /if }}
+</script>
+
+
+<!-- 太坑 -->
+<script type="text/template" id="proTmp">
+  {{ each list ele index }}
+  <li>
+    <img src=" {{ ele.productImg }} " alt="">
+    <p class="text-nowarp-2">{{ ele.productName }}</p>
+    <div class="bot">
+      <span class="red">{{ ele.productPrice }}</span>
+      <button>去赊单</button>
+    </div>
+  </li>
+  {{ /each }}  
+</script>
+
+<script src="lib/jQuery/jquery-1.12.4.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/simple inherit.js"></script>
+<script src="js/api.js"></script>
+<script src="js/final.js"></script>
+
+<script>
+</script>
+</body>
+
+</html>

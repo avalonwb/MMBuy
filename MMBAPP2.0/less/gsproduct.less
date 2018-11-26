@@ -1,0 +1,208 @@
+@import "normalize";
+@import "base";
+@import "vairable";
+@import "adapter";
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+
+  background-color: #f1f1f1;
+  margin: 0 auto;
+
+}
+.mmb_header {
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+  .back {
+    float: left;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 14rem/@base;
+    background: url(../images/icback.svg) no-repeat;
+    background-size: 20rem/@base 20rem/@base;
+    background-clip: content-box;
+    background-origin: content-box;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 18rem/@base;
+    text-align: center;
+    overflow: hidden;
+    line-height: 48rem/@base;
+
+  }
+  .app {
+    float: right;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 7rem/@base;
+
+  }
+}
+
+.mmb_footer {
+  background-color: #efefef;
+  .top {
+    border-top: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+    a {
+      display: block;
+      float: left;
+      width: 33.33%;
+      height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+      line-height: 32rem/@base;
+    }
+    .toTop {
+      border-right: none;
+    }
+  }
+  .bottom {
+    border-top: 1rem/@base solid #c4c4c4;
+    height: 62rem/@base;
+    font-size: 12rem/@base;
+    padding: 15rem/@base 0;
+    text-align: center;
+    .downApp {
+
+      .colred {
+        color: red;
+      }
+    }
+    .col666{
+      color: #666;
+    }
+  }
+}
+
+.mmb_gsNav {
+  height: 42rem/@base;
+  border-bottom: 1rem/@base solid #ccc;
+  background-color: #fff;
+  position: relative;
+  .gsnavBox {
+    margin-right: 50rem/@base;
+    //overflow: hidden;
+  }
+
+  .gsnavList {
+    width: 33%;
+    text-align: center;
+    float: left;
+    font-size: 14rem/@base;
+    height: 40rem/@base;
+    line-height: 40rem/@base;
+
+    i {
+      width: 20rem/@base;
+      height: 20rem/@base;
+      display: inline-block;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M277.44 194.72 528.213333 445.386667 778.88 194.72Z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+
+
+    }
+
+  }
+  .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50rem/@base;
+    height: 100%;
+    border-left: 1rem/@base solid #ccc;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' vi…224L605.3888 5.975467z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+
+    color: #ffffff;
+    background-size: 22px 22px;
+    background-position: center center;
+  }
+  .select {
+    width: 100%;
+    ul {
+      width: 100%;
+      position: absolute;
+      top: 42rem/@base;
+      left: 0rem/@base;
+      background-color: #fff;
+      display: none;
+      z-index: 20;
+    }
+    li {
+      border-bottom: 1rem/@base solid #ccc;
+      height: 45rem/@base;
+      line-height: 45rem/@base;
+      padding: 0 10rem/@base;
+      font-size: 14rem/@base;
+
+    }
+  }
+}
+
+.mmb_gsContent {
+
+  //margin: 10rem/@base 5rem/@base 20rem/@base;
+  .conBox {
+    overflow: hidden;
+    margin: 10rem/@base 5rem/@base 20rem/@base;
+
+  }
+
+  .conList {
+    width: 47%;
+    float: left;
+    height: 235rem/@base;
+    margin: 0 5rem/@base;
+    margin-bottom: 10rem/@base;
+    background-color: #fff;
+    .img {
+      img{
+        width: 164rem/@base;
+        height: 164rem/@base;
+        margin: 0 auto;
+      }
+
+    }
+    .desc {
+      position: relative;
+      height: 67rem/@base;
+      >p {
+        font-size: 12rem/@base;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .bottom {
+      margin-top: 5rem/@base;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0rem/@base;
+
+    }
+    .price {
+      line-height: 27rem/@base;
+      color: #f8601d;
+      font-size: 20rem/@base;
+    }
+    .btn {
+      background-color: #ff9501;
+      width: 62rem/@base;
+      height: 27rem/@base;
+      text-align: center;
+      line-height: 27rem/@base;
+      margin-right: 5rem/@base;
+      font-size: 14rem/@base;
+      color: #ffffff;
+
+    }
+  }
+}

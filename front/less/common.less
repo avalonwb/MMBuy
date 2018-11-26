@@ -1,0 +1,273 @@
+/* css初始化 */
+@import "normalize";
+
+@import "base";
+
+// 引入公共变量
+
+@import "var";
+
+
+/*  清除默认样式  */
+button {
+  border:none;
+  box-shadow: none;
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.red {
+  color: #e93323 !important;
+}
+
+i {
+  font-style: normal;
+}
+
+/*  全屏容器  */
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+/* 缩进类 */
+
+.text-nowarp
+{
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.text-nowarp-2
+{
+    display: -webkit-box;
+    overflow: hidden;
+
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+/*  公共样式  */
+
+/* site-top */
+.site-top {
+  width: 100%;
+  height: 96rem/@base;
+  background-color: #ff841d;
+  
+  .logo {
+    float: left;
+    width: 375rem/@base;
+    height: 55rem/@base;
+    margin: 20rem/@base 0 0 35rem/@base;
+    background: url("../images/header_logo.png") no-repeat;
+    background-size : 375rem/@base 55rem/@base;
+  }
+
+  .app {
+    float: right;
+    width: 75rem/@base;
+    height: 75rem/@base;
+    margin: 13rem/@base 15rem/@base 0 0;
+    background: url("../images/header_app.png") no-repeat;
+    background-size : 75rem/@base 75rem/@base;
+  }
+
+}
+
+/*  search  */
+.search {
+  width: 100%;
+  height: 100rem/@base;
+  padding: 20rem/@base 18rem/@base;
+  background-color: #fff;
+
+  input {
+    float: left;
+    width: 80%;
+    height: 60rem/@base;
+    background-color: #f1f1f1;
+    border-radius: 20rem/@base;
+    padding-left: 30rem/@base;
+    font-size: 18rem/@base;
+  }
+
+  button {
+    float: right;
+    width: 15%;
+    height: 50rem/@base;
+    background: #ff841d;
+    color: aliceblue;
+    border-radius: 20rem/@base;
+    margin-left: 15rem/@base;
+    font-size: 25rem/@base;
+    margin-top: 5rem/@base;
+  }
+}
+
+/* bread */
+.bread {
+  width: 100%;
+  height: 70rem/@base;
+  background-image: linear-gradient(to bottom , #fff , #ccc);
+  
+  a {
+    float: left;
+    line-height: 70rem/@base;
+    margin-left: 15rem/@base;
+    font-size: 25rem/@base;
+  }
+
+  button {
+    float: right;
+    width: 120rem/@base;
+    height: 56rem/@base;
+    font-size: 25rem/@base;
+    text-align: center;
+    line-height: 56rem/@base;
+    margin-right: 15rem/@base;
+    margin-top: 7rem/@base;
+    border-radius: 10rem/@base;
+    background-image: linear-gradient(to top , #fff , #ccc);
+    box-shadow: 2rem/@base 2rem/@base 2rem/@base #ccc;
+  }
+}
+
+/* more */
+.moreBtn {
+  width: 80%;
+  height: 60rem/@base;
+  border-radius: 8rem/@base;
+  font-size :20rem/@base;
+  margin: 15rem/@base 0;
+  border: 2rem/@base solid #ccc;
+  background-color: #fff;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 200rem/@base;
+  padding-top: 50rem/@base;
+  
+  ul {
+    border: 1rem/@base solid #ccc;
+    height: 30%;
+
+    li {
+      float: left;
+      position: relative;
+      width: 33.3%;
+      height: 100%;
+      line-height: 43rem/@base;
+      text-align: center;
+      font-size: 24rem/@base;
+      border-right: 1rem/@base solid #ccc;
+
+      img {
+        position: absolute;
+        top: 8rem/@base;
+        left: 48rem/@base;
+        width: 25rem/@base;
+        height: 25rem/@base;
+      }
+    }
+  }
+
+  .last {
+    height: 70%;
+    margin-top: 20rem/@base;
+    text-align: center;
+    font-size: 20rem/@base;
+    
+    p {
+      color: black;
+      
+      i {
+        color: #666;
+      }
+
+      &:nth-child(1) {
+        margin-bottom: 10rem/@base;
+      }
+    }
+  }
+}
+
+/*  tip  */
+.tip {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color:rgba(0, 0, 0, .5);
+  display: none;
+
+  .warning {
+    position: absolute;
+    top: 76%;
+    left: 30%;
+    width: 300rem/@base;
+    height: 200rem/@base;
+    border-radius: 8rem/@base;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255,255,255,0.9);
+
+    h3 {
+      width: 100%;
+      height: 150rem/@base;
+      line-height: 160rem/@base;
+      font-size: 20rem/@base;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .btns {
+      width: 100%;
+      height: 50rem/@base;
+      font-size: 20rem/@base;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      
+      button {
+        height: 35rem/@base;
+        width: 80rem/@base;
+
+        &.yes {
+          background-color: #e93323;
+          color: azure;
+        }
+
+        &.no {
+          background-color: #666;
+          color: #fff;
+        }
+
+      }
+
+
+    }
+
+  }
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/inlanddiscount.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <i class="back" onclick="javascript:history.back(-1)"></i>
+      <img src="images/header_app.png" class="app" alt="">
+      <h3>国内折扣</h3>
+
+    </div>
+    <div class="mmb_inlanddiscount">
+      <ul class="discountBox">
+        <li class="discountList">
+          <a href="#">
+            <div class="img">
+              <img src="images/mnav.jpg" alt="">
+            </div>
+            <div class="desc">
+              <p class="proName">西域美农新疆特产五星和田红枣250g*2</p>
+              <p class="price">19.8元(5件99元)</p>
+              <p class="proTime">
+                <span>京东商城</span> |
+                <span>10-22 13:28</span>
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="discountList">
+          <a href="#">
+            <div class="img">
+              <img src="images/mnav.jpg" alt="">
+            </div>
+            <div class="desc">
+              <p class="proName">西域美农新疆特产五星和田红枣250g*2</p>
+              <p class="price">19.8元(5件99元)</p>
+              <p class="proTime">
+                <span>京东商城</span> |
+                <span>10-22 13:28</span>
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="discountList">
+          <a href="#">
+            <div class="img">
+              <img src="images/mnav.jpg" alt="">
+            </div>
+            <div class="desc">
+              <p class="proName">西域美农新疆特产五星和田红枣250g*2</p>
+              <p class="price">19.8元(5件99元)</p>
+              <p class="proTime">
+                <span>京东商城</span> |
+                <span>10-22 13:28</span>
+              </p>
+            </div>
+          </a>
+        </li>
+        <li class="discountList">
+          <a href="#">
+            <div class="img">
+              <img src="images/mnav.jpg" alt="">
+            </div>
+            <div class="desc">
+              <p class="proName">西域美农新疆特产五星和田红枣250g*2</p>
+              <p class="price">19.8元(5件99元)</p>
+              <p class="proTime">
+                <span>京东商城</span> |
+                <span>10-22 13:28</span>
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/inlanddiscount.js"></script>
+
+  <script type="text/template" id="inlanddiscount">
+    {{each result v i}}
+    <li class="discountList">
+      <a href="discount.html?productid={{v.productId}}" data-productId="{{v.productId}}">
+        <div class="img">
+          {{@v.productImg}}
+        </div>
+        <div class="desc">
+          <p class="proName">{{v.productName}}</p>
+          <div class="bottom">
+            <p class="price">{{v.productPrice}}</p>
+            <p class="proTime">
+              <span>{{v.productFrom}}</span> |
+              <span>{{v.productTime}}</span>
+            </p>
+          </div>
+
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+</body>
+
+</html>

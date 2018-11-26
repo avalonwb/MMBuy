@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主页</title>
+  <link rel="stylesheet" href="lib/animate.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/product.css">
+  
+  <style>
+
+  </style>
+  <script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="main">
+
+      <!-- site-top -->
+      <div class="site-top">
+        <div class="logo"></div>
+        <div class="app"></div>
+      </div>
+
+      <!-- search -->
+      <div class="search clearfix">
+        <input type="text" placeholder="输入你想比价的内容">
+        <button>搜索</button>
+      </div>
+      
+      <!-- middle -->
+      <div class="middle">
+         
+        <!-- 面包屑 -->
+        <div class="bread">
+           <!-- 坑 -->
+        </div>
+
+        <!-- 列表 -->
+        <ul class="list">
+           <!-- 大坑 -->
+        </ul>
+        
+        <!-- 页码 -->
+        <div class="control">
+          <button class="left">上一页</button>
+          <div class="input">
+             <!-- 施工中 -->
+          </div>
+          <button class="right">下一页</button>
+        </div> 
+         
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <ul class="clearfix">
+          <li>登录</li>
+          <li>注册</li>
+          <li id="goTop"><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="last">
+          <p><span class="red">手机app卸载</span>MMP手机版<i>--掌上比价平台</i></p>
+          <p>m.mmmmp.com</p>
+        </div>
+      </div>
+
+      <!-- tips -->
+      <div class="tip">
+        <div class="warning animated bounceInDown">
+          <h3>你怎么回事小老弟,别乱输</h3>
+          <div class="btns">
+             <button class="no">就不</button>
+             <button class="yes">好吧</button>
+          </div>
+        </div>
+      </div>     
+   
+    </div>
+  </div>
+
+
+<!-- 面包屑坑 -->
+<script type="text/template" id="breadTmp">
+ {{ each result ele index }}
+  <a href="index.html">首页 ></a>
+  <a href="category.html">全部分类 ></a>
+  <a href="#" data-cate="{{ ele.category }}">{{ ele.category }} ></a>
+  <button class="btn">筛选</button>
+ {{ /each }}
+</script>
+
+<!-- 页码坑 -->
+<script type="text/template" id="pageTmp">
+  
+  <input type="text" value="{{ currentPage }}/{{ pages }}" id="ipt">
+  <ul class="page">
+
+  <%  
+  var end = pages;
+  for(var i = 1 ; i <= end ; i++) {%>              
+    <li><%= i + '/'+ end %></li> 
+  <% } %>
+
+  </ul>
+
+</script>
+
+<!-- 商品坑 -->
+<script type="text/template" id="productTmp">
+  {{ each result ele index }}
+    <li>
+      <a href="javascript:;" data-proid="{{ ele.productId }}">
+        <div class="img">
+            {{@ ele.productImg }} 
+        </div>
+        <div class="right">
+            <div class="top">
+              <h2>{{ ele.productName }}</h2>
+              <span class="red">{{ ele.productPrice }}</span>
+            </div>
+            <div class="bottom">
+              <span>{{ ele.productQuote }}</span>
+              <span>{{ ele.productCom }}</span>
+            </div>
+        </div>
+      </a>
+    </li>
+  {{ /each }}
+</script>
+
+<script src="lib/jQuery/jquery-1.12.4.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
+<script src="js/common.js"></script>
+<script src="js/product.js"></script>
+
+<script>
+</script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+@import "normalize";
+@import "base";
+@import "vairable";
+@import "adapter";
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+
+  background-color: #fff;
+  margin: 0 auto;
+
+}
+.mmb_header {
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+  .back {
+    float: left;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 14rem/@base;
+    background: url(../images/icback.svg) no-repeat;
+    background-size: 20rem/@base 20rem/@base;
+    background-clip: content-box;
+    background-origin: content-box;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 18rem/@base;
+    text-align: center;
+    overflow: hidden;
+    line-height: 48rem/@base;
+
+  }
+  .app {
+    float: right;
+    height: 48rem/@base;
+    width: 48rem/@base;
+    padding: 7rem/@base;
+
+  }
+}
+
+.mmb_footer {
+  background-color: #efefef;
+  .top {
+    border-top: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+    a {
+      display: block;
+      float: left;
+      width: 33.33%;
+      height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+      line-height: 32rem/@base;
+    }
+    .toTop {
+      border-right: none;
+    }
+  }
+  .bottom {
+    border-top: 1rem/@base solid #c4c4c4;
+    height: 62rem/@base;
+    font-size: 12rem/@base;
+    padding: 15rem/@base 0;
+    text-align: center;
+    .downApp {
+
+      .colred {
+        color: red;
+      }
+    }
+    .col666{
+      color: #666;
+    }
+  }
+}
+
+.mmb_moneyctrl {
+  .monCtrl {
+
+
+  }
+  .ctrlItem {
+    padding: 15rem/@base 10rem/@base;
+    height: 128rem/@base;
+    .img{
+      float: left;
+      img {
+        width: 100rem/@base;
+        height: 100rem/@base;
+
+      }
+    }
+    .desc {
+      height: 100%;
+      overflow: hidden;
+      margin-left: 120rem/@base;
+      position: relative;
+      .text {
+        font-size: 15rem/@base;
+        color: #333;
+
+        span {
+          color: #ff6c00;
+        }
+      }
+      .bottom {
+        width: 100%;
+        position: absolute;
+        bottom: 10rem/@base;
+        left: 0rem/@base;
+        font-size: 12rem/@base;
+        color: #a1a1a1;
+        .comTol {
+          position: absolute;
+          bottom: 0rem/@base;
+          right: 0rem/@base;
+        }
+      }
+    }
+
+  }
+
+  .paging {
+
+    height: 38rem/@base;
+    margin-top: 10rem/@base;
+    >div {
+      width: 33.33%;
+      text-align: center;
+      line-height: 33rem/@base;
+      font-size: 14rem/@base;
+    }
+    button{
+      width: 82rem/@base;
+      height: 33rem/@base;
+      outline-style: none;
+    }
+    .currPage {
+      margin: 0 auto;
+      width: 77rem/@base;
+      height: 36rem/@base;
+      line-height: 36rem/@base;
+      border: 1rem/@base solid #ccc;
+      position: relative;
+    }
+    .morePage {
+      position: absolute;
+      bottom: 33rem/@base;
+      left: -1rem/@base;
+      border: 1rem/@base solid #ccc;
+      background-color: #fff;
+      width: 77rem/@base;
+      display: none;
+    }
+  }
+}

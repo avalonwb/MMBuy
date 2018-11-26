@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mmb_header">
+      <i class="back" onclick="javascript:history.back(-1)"></i>
+      <img src="images/header_app.png" class="app" alt="">
+      <h3>省钱控-最新优惠</h3>
+    </div>
+    <div class="mmb_moneyctrl">
+      <ul class="monCtrl">
+        <li class="ctrlItem">
+          <a href="#">
+            <div class="img">
+              <img src="images/jiangyou.jpg" alt="">
+            </div>
+            <div class="desc">
+              <div class="text">移动端凑单品：海天 鲜味 生抽 1.28L
+                <span>10.9元</span>
+              </div>
+              <div class="bottom">
+                <span>京东商城</span> |
+                <span>10-25 14:10</span>
+                <span class="comTol">1</span>
+              </div>
+            </div>
+
+          </a>
+        </li>
+      </ul>
+
+      <div class="paging clearfix">
+        <div class="fl">
+          <button class="prev">上一页</button>
+        </div>
+        <div class="fl">
+          <div class="currPage">
+            <span>1/3</span>
+            <ul class="morePage">
+              <li>1/3</li>
+              <li>2/3</li>
+              <li>3/3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fl">
+          <button class="next">下一页</button>
+        </div>
+      </div>
+    </div>
+    <div class="mmb_footer">
+      <div class="top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#" class="toTop">
+          返回顶部
+        </a>
+      </div>
+      <div class="bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/moneyctrl.js"></script>
+
+  <script type="text/template" id="moneyctrl">
+    {{each result v i}}
+    <li class="ctrlItem">
+      <a href="moneyproduct.html?productid={{v.productId}}" data-productId="{{v.productId}}">
+        <div class="img">
+          {{@v.productImg2}}
+        </div>
+        <div class="desc">
+          <div class="text">{{v.productName}}
+            <span>{{v.productPinkage}}</span>
+          </div>
+          <div class="bottom">
+            <span>{{v.productFrom}}</span> |
+            <span>{{v.productTime}}</span>
+            <span class="comTol">{{v.productComCount}}</span>
+          </div>
+        </div>
+
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/template" id="pageCount">
+
+
+    <%for(i = 0; i < pageCount; i ++) {%>
+      <li>
+        <%=i+1%>/
+          <%=pageCount%>
+      </li>
+      <%}%>
+
+  </script>
+</body>
+
+</html>
